@@ -10,7 +10,7 @@ import javafx.beans.property.StringProperty;
  * Created by Lektor on 25.09.2016.
  */
 public class Engineer implements Comparable<Engineer>{
-    private  IntegerProperty id;
+    private IntegerProperty id;
     private StringProperty name;
     private IntegerProperty age;
     private IntegerProperty category;
@@ -26,11 +26,17 @@ public class Engineer implements Comparable<Engineer>{
     public IntegerProperty ageProperty(){return age;}
     public IntegerProperty categoryProperty(){return category;}
 
-    public void setName(String name) {this.name.setValue(name);}
+    public void setId(int id) {this.id.set(id);}
+    public void setName(String name) {this.name.set(name);}
     public void setAge(int age) {this.age.set(age);}
     public void setCategory(int category) {this.category.set(category);}
 
-    public Engineer() {}
+    public Engineer() {
+        this.id = new SimpleIntegerProperty(0);
+        this.name = new SimpleStringProperty("");
+        this.age = new SimpleIntegerProperty(0);
+        this.category = new SimpleIntegerProperty(0);
+    }
 
     public Engineer(int id, String name, int age, int category) {
         this.id = new SimpleIntegerProperty(id);
@@ -59,5 +65,5 @@ public class Engineer implements Comparable<Engineer>{
     public int hashCode() {return getId();}
 
     @Override
-    public String toString(){return String.format(INFO_ENG, id, name, age, category);}
+    public String toString(){return String.format(INFO_ENG, id.get(), name.get(), age.get(), category.get());}
 }
