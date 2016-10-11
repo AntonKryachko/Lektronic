@@ -21,13 +21,13 @@ public class EditController {
     @FXML
     private TextField categoryField;
 
-//    private boolean okClicked = false;
+   private boolean okClicked = false;
     private Stage editStage;
     private Engineer engineer;
     private Main main;
-//    public boolean isOkClicked() {
-//        return okClicked;
-//    }
+    public boolean isOkClicked() {
+        return okClicked;
+    }
     public TextField getIdField(){
         return idField;
     }
@@ -43,33 +43,17 @@ public class EditController {
         ageField.setText(Integer.toString(engineer.getAge()));
         categoryField.setText(Integer.toString(engineer.getCategory()));
     }
-    private boolean checkID(int id){
-        int i = 0;
-        for (Engineer e: main.getEngineers()) {
-            if (e.getId() == id){
-                i++;
-            }
-        }
-        if (i > 0){
-            return true;
-        }else{
-            return false;
-        }
-    }
+
     private boolean isInputValid(){
         String errorString = "";
 
-        if (idField.getText() == null || idField.getText().length() == 0 || checkID(Integer.parseInt(idField.getId()))){
-            errorString += "No valid ID (ID shouldn't be repeated)\n";
+        if (idField.getText() == null || idField.getText().length() == 0){
+            errorString += "No valid ID\n";
         }else{
-//            if () {
-//                errorString +="";
-//            }else {
-                try{
-                    Integer.parseInt(idField.getText());
-                }catch (NullPointerException e){
-                    errorString += "No valid ID (must be an integer)\n";
-//                }
+            try{
+                Integer.parseInt(idField.getText());
+            }catch (NullPointerException e){
+                errorString += "No valid ID (must be an integer)\n";
             }
         }
         if (nameField.getText() == null || nameField.getText().length() == 0){

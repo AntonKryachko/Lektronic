@@ -20,12 +20,12 @@ public class AboutAuthorController {
     private ImageView image_s;
     @FXML
     private void handleClose(){
-        authorStage.close();
+        authorStage.toBack();
     }
 
     @FXML
     public void initialize(){
-        image_s.setImage(new Image("res/images/pP3-cy54hvE.jpg"));
+        image_s.setImage(new Image("sample/res/images/pP3-cy54hvE.jpg"));
     }
 
 }

@@ -1,5 +1,6 @@
 package sample.view;
 
+import javafx.beans.property.IntegerProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import sample.Main;
@@ -32,6 +33,7 @@ public class EngineerOverviewController {
     @FXML
     private RadioButton radioCategory;
     private ToggleGroup g;
+    private int number = 0;
     @FXML
     private void handleFilter(){
 
@@ -44,31 +46,42 @@ public class EngineerOverviewController {
     private void handleDeleteUnderCat(){
 
     }
-    private boolean checkID(int id){
-        int i = 0;
-        for (Engineer e: main.getEngineers()) {
-            if(e.getId() == id) {
-                i++;
-            }
-        }
-        if (i != 0){
-            return false;
-        }
-        else {
-            return true;
-        }
+    @FXML
+    private void handleSpecial(){
+        main.showSpecialData();
     }
     @FXML
     private void handleAdd(){
         Engineer engineer = new Engineer();
-        main.showEngineerEdit(engineer);
-        main.getEngineers().add(engineer);
+        boolean okID = main.showEngineerEdit(engineer);
+        if (okID){
+            main.getEngineers().add(engineer);
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.initOwner(main.getPrimaryStage());
+            alert.setTitle("ID repeated");
+            alert.setHeaderText("ID repeated ");
+            alert.setContentText("Please select another ID for an engineer");
+
+            alert.showAndWait();
+        }
     }
     @FXML
     private void handleEdit(){
         Engineer selectedEng = engineerTable.getSelectionModel().getSelectedItem();
         if (selectedEng != null){
-            main.showEngineerEdit(selectedEng);
+            boolean okID =  main.showEngineerEdit(selectedEng);
+            if (okID){
+                System.out.println("all is OK");
+            }else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.initOwner(main.getPrimaryStage());
+                alert.setTitle("ID repeated");
+                alert.setHeaderText("ID repeated ");
+                alert.setContentText("Please select another ID for an engineer");
+
+                alert.showAndWait();
+            }
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(main.getPrimaryStage());
@@ -78,16 +91,11 @@ public class EngineerOverviewController {
 
             alert.showAndWait();
         }
-
-    }
-    @FXML
-    private void handleSpecial(){
-
     }
     @FXML
     private void handleDeleteById(){
         int selectedEng = engineerTable.getSelectionModel().getSelectedIndex();
-        if(selectedEng >=0){
+        if  (selectedEng >=0){
             engineerTable.getItems().remove(selectedEng);
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -112,7 +120,6 @@ public class EngineerOverviewController {
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         ageColumn.setCellValueFactory(cellData -> cellData.getValue().ageProperty().asObject());
         categoryColumn.setCellValueFactory(cellData -> cellData.getValue().categoryProperty().asObject());
-
     }
 
     public void setMain(Main main){
