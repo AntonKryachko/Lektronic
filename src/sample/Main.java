@@ -161,7 +161,7 @@ public class Main extends Application {
             authorStage.setScene(scene);
             authorStage.getIcons().add(new Image("sample/res/images/holybible.png"));
             authorStage.setResizable(false);
-            AboutAuthorController controller = new AboutAuthorController();
+            AboutAuthorController controller = loader.getController();
             controller.setAuthorStage(authorStage);
 
             authorStage.show();
@@ -184,9 +184,10 @@ public class Main extends Application {
             Scene scene = new Scene(page);
             specialStage.setScene(scene);
 
-            SpecialDataController controller = new SpecialDataController();
+            SpecialDataController controller = loader.getController();
             controller.setSpecialStage(specialStage);
-            controller.setMain(this);
+            controller.setEngineers(engineers);
+
             specialStage.showAndWait();
         }catch (IOException e){
             e.printStackTrace();
@@ -248,6 +249,13 @@ public class Main extends Application {
             alert.setContentText("Could not save data to file:\n" + file.getPath());
 
             alert.showAndWait();
+        }
+    }
+    public void deleteUnderValue(int value, boolean isAge){
+        if (isAge){
+
+        }else{
+
         }
     }
 }

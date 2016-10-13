@@ -32,6 +32,10 @@ public class EngineerOverviewController {
     private RadioButton radioAge;
     @FXML
     private RadioButton radioCategory;
+    @FXML
+    private TextField deleteUnderAgeField;
+    @FXML
+    private TextField deleteUnderCatField;
     private ToggleGroup g;
     private int number = 0;
     @FXML
@@ -40,10 +44,27 @@ public class EngineerOverviewController {
     }
     @FXML
     private void handleDeleteUnderAge(){
+        int age = Integer.parseInt(deleteUnderAgeField.getText());
+
+        for (Engineer eng: main.getEngineers()){
+            if (eng.getAge() == age){
+                main.getEngineers().remove(eng);
+            }
+        }
+        engineerTable.setItems(main.getEngineers());
 
     }
     @FXML
     private void handleDeleteUnderCat(){
+        int category = Integer.parseInt(deleteUnderCatField.getText());
+        main.deleteUnderValue(category, false);
+        for (Engineer eng: main.getEngineers()){
+            if (eng.getCategory() == category){
+                main.getEngineers().remove(eng);
+            }
+        }
+        engineerTable.setItems(main.getEngineers());
+
 
     }
     @FXML
@@ -115,6 +136,7 @@ public class EngineerOverviewController {
         radioAge.setToggleGroup(g);
         radioName.setToggleGroup(g);
         radioCategory.setToggleGroup(g);
+        radioName.setSelected(true);
 
         idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());

@@ -20,7 +20,7 @@ public class AboutAuthorController {
     private ImageView image_s;
     @FXML
     private void handleClose(){
-        authorStage.toBack();
+        authorStage.close();
     }
 
     @FXML

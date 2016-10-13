@@ -21,10 +21,12 @@ public class EditController {
     @FXML
     private TextField categoryField;
 
-   private boolean okClicked = false;
+    private boolean okClicked = false;
     private Stage editStage;
     private Engineer engineer;
+
     private Main main;
+
     public boolean isOkClicked() {
         return okClicked;
     }
@@ -34,7 +36,6 @@ public class EditController {
     public void setEditStage(Stage editStage) {
         this.editStage = editStage;
     }
-
     public void setEngineer(Engineer engineer){
         this.engineer = engineer;
 
@@ -77,15 +78,18 @@ public class EditController {
                 errorString += "No valid CATEGORY (must be an integer)\n";
             }
         }
-        if (errorString.length() != 0){
+        if (errorString.length() == 0){
+            return true;
+        }else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.initOwner(editStage);
             alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
             alert.setContentText(errorString);
 
+            alert.showAndWait();
+
             return false;
-        }else {
-            return true;
         }
     }
 

@@ -1,5 +1,6 @@
 package sample.view;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -22,15 +23,18 @@ public class SpecialDataController {
     private Label minAge;
 
     private Stage specialStage;
+    private ObservableList<Engineer> list;
+
     public void setSpecialStage(Stage specialStage){
         this.specialStage = specialStage;
     }
-    public void setMain(Main main){this.main = main;}
+    public void setEngineers(ObservableList<Engineer> list){
+        this.list = list;
+    }
     @FXML
     private void handleClose(){
         specialStage.close();
     }
-    private Main main;
 
     @FXML
     public void initialize(){
@@ -43,7 +47,7 @@ public class SpecialDataController {
 
     private int sumCat1(){
         int i = 0;
-        for(Engineer eng: this.main.getEngineers()){
+        for(Engineer eng: list){
             if (eng.getCategory() == 1){
                 i++;
             }
@@ -52,7 +56,7 @@ public class SpecialDataController {
     }
     private int sumCat2(){
         int i = 0;
-        for(Engineer eng: main.getEngineers()){
+        for(Engineer eng: list){
             if (eng.getCategory() == 2){
                 i++;
             }
@@ -61,7 +65,7 @@ public class SpecialDataController {
     }
     private int sumCat3(){
         int i = 0;
-        for(Engineer eng: main.getEngineers()){
+        for(Engineer eng: list){
             if (eng.getCategory() == 3){
                 i++;
             }
@@ -72,7 +76,7 @@ public class SpecialDataController {
     private int findMaxAge(){
         int max = 0;
         Engineer eng;
-        for (Engineer e: main.getEngineers()){
+        for (Engineer e: list){
             if (e.getAge() > max) {
                 max = e.getAge();
             }
@@ -82,7 +86,7 @@ public class SpecialDataController {
     private int findMinAge(){
         int min = 200;
         Engineer eng;
-        for (Engineer e: main.getEngineers()){
+        for (Engineer e: list){
             if (e.getAge() < min) {
                 min = e.getAge();
             }
