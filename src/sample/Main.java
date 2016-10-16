@@ -66,6 +66,7 @@ public class Main extends Application {
         this.primaryStage.setTitle("Lectronic");
         this.primaryStage.getIcons().add(new Image("sample/res/images/main_icon.png"));
         initRootLayout();
+
         showEngineerOverview();
     }
 
@@ -88,19 +89,6 @@ public class Main extends Application {
         File file = getEngineerFilePath();
         if (file != null){
             loadEngineerDataFromFile(file);
-        }
-    }
-    public boolean isIDRepeat(int id){
-        int i = 0;
-        for (Engineer e: engineers) {
-            if (e.getId() == id){
-                i++;
-            }
-        }
-        if (i > 0){
-            return false;
-        }else{
-            return true;
         }
     }
     public void showEngineerOverview(){
@@ -136,11 +124,11 @@ public class Main extends Application {
             EditController controller = loader.getController();
             controller.setEditStage(editStage);
             controller.setEngineer(engineer);
+            controller.setMain(this);
 
             editStage.showAndWait();
 
-            return isIDRepeat(Integer.parseInt(controller.getIdField().getText()));
-
+            return controller.isOkClicked();
         }catch (IOException e){
             e.printStackTrace();
             return false;
@@ -173,13 +161,14 @@ public class Main extends Application {
     public void showSpecialData(){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("view/SpecialData.fxml"));
+            loader.setLocation(getClass().getResource("view/Special.fxml"));
             AnchorPane page = loader.load();
 
             Stage specialStage = new Stage();
             specialStage.setTitle("Special");
             specialStage.initModality(Modality.WINDOW_MODAL);
             specialStage.initOwner(primaryStage);
+            specialStage.setResizable(false);
 
             Scene scene = new Scene(page);
             specialStage.setScene(scene);
@@ -187,6 +176,7 @@ public class Main extends Application {
             SpecialDataController controller = loader.getController();
             controller.setSpecialStage(specialStage);
             controller.setEngineers(engineers);
+            controller.setMain(this);
 
             specialStage.showAndWait();
         }catch (IOException e){
@@ -214,10 +204,11 @@ public class Main extends Application {
     }
     public void loadEngineerDataFromFile(File file){
         try{
-            JAXBContext context = JAXBContext.newInstance(getClass());
+            JAXBContext context = JAXBContext.newInstance(EngineerListWrapper.class);
             Unmarshaller um = context.createUnmarshaller();
 
             EngineerListWrapper wrapper = (EngineerListWrapper) um.unmarshal(file);
+
             engineers.clear();
             engineers.addAll(wrapper.getEngineers());
 
@@ -233,7 +224,7 @@ public class Main extends Application {
     }
     public void saveEngineersDataToFile(File file){
         try{
-            JAXBContext context = JAXBContext.newInstance(getClass());
+            JAXBContext context = JAXBContext.newInstance(EngineerListWrapper.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
@@ -241,6 +232,7 @@ public class Main extends Application {
             wrapper.setEngineers(engineers);
 
             marshaller.marshal(wrapper, file);
+
             setEngineerFilePath(file);
         }catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -251,11 +243,5 @@ public class Main extends Application {
             alert.showAndWait();
         }
     }
-    public void deleteUnderValue(int value, boolean isAge){
-        if (isAge){
 
-        }else{
-
-        }
-    }
 }

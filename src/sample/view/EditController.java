@@ -27,11 +27,9 @@ public class EditController {
 
     private Main main;
 
+    public void setMain(Main main) {this.main = main;}
     public boolean isOkClicked() {
         return okClicked;
-    }
-    public TextField getIdField(){
-        return idField;
     }
     public void setEditStage(Stage editStage) {
         this.editStage = editStage;
@@ -52,7 +50,9 @@ public class EditController {
             errorString += "No valid ID\n";
         }else{
             try{
-                Integer.parseInt(idField.getText());
+                if (isIDRepeat(Integer.parseInt(idField.getText()))){
+                    errorString += "No valid ID (not to be repeated)\n";
+                }
             }catch (NullPointerException e){
                 errorString += "No valid ID (must be an integer)\n";
             }
@@ -92,7 +92,19 @@ public class EditController {
             return false;
         }
     }
-
+    private boolean isIDRepeat(int id){
+        int i = 0;
+        for (Engineer e: main.getEngineers()) {
+            if (e.getId() == id){
+                i++;
+            }
+        }
+        if (i > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
     @FXML
     private void handleOk(){
         if(isInputValid()){
@@ -100,6 +112,7 @@ public class EditController {
             engineer.setName(nameField.getText());
             engineer.setAge(Integer.parseInt(ageField.getText()));
             engineer.setCategory(Integer.parseInt(categoryField.getText()));
+            okClicked = true;
             editStage.close();
         }
     }

@@ -23,6 +23,7 @@ public class SpecialDataController {
     private Label minAge;
 
     private Stage specialStage;
+    private Main main;
     private ObservableList<Engineer> list;
 
     public void setSpecialStage(Stage specialStage){
@@ -31,18 +32,27 @@ public class SpecialDataController {
     public void setEngineers(ObservableList<Engineer> list){
         this.list = list;
     }
+    public void setMain(Main main){this.main = main;}
     @FXML
     private void handleClose(){
         specialStage.close();
     }
 
     @FXML
-    public void initialize(){
-        sum1cat.setText(Integer.toString(sumCat1()));
-        sum2cat.setText(Integer.toString(sumCat2()));
-        sum3cat.setText(Integer.toString(sumCat3()));
-        maxAge.setText(Integer.toString(findMaxAge()));
-        minAge.setText(Integer.toString(findMinAge()));
+    public void initialize() {
+        if (list != null) {
+            sum1cat.setText(Integer.toString(sumCat1()));
+            sum2cat.setText(Integer.toString(sumCat2()));
+            sum3cat.setText(Integer.toString(sumCat3()));
+            maxAge.setText(Integer.toString(findMaxAge()));
+            minAge.setText(Integer.toString(findMinAge()));
+        } else {
+            sum1cat.setText("Unknown");
+            sum2cat.setText("Unknown");
+            sum3cat.setText("Unknown");
+            maxAge.setText("Unknown");
+            minAge.setText("Unknown");
+        }
     }
 
     private int sumCat1(){

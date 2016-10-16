@@ -45,7 +45,6 @@ public class EngineerOverviewController {
     @FXML
     private void handleDeleteUnderAge(){
         int age = Integer.parseInt(deleteUnderAgeField.getText());
-
         for (Engineer eng: main.getEngineers()){
             if (eng.getAge() == age){
                 main.getEngineers().remove(eng);
@@ -57,7 +56,6 @@ public class EngineerOverviewController {
     @FXML
     private void handleDeleteUnderCat(){
         int category = Integer.parseInt(deleteUnderCatField.getText());
-        main.deleteUnderValue(category, false);
         for (Engineer eng: main.getEngineers()){
             if (eng.getCategory() == category){
                 main.getEngineers().remove(eng);
@@ -77,32 +75,13 @@ public class EngineerOverviewController {
         boolean okID = main.showEngineerEdit(engineer);
         if (okID){
             main.getEngineers().add(engineer);
-        }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("ID repeated");
-            alert.setHeaderText("ID repeated ");
-            alert.setContentText("Please select another ID for an engineer");
-
-            alert.showAndWait();
         }
     }
     @FXML
     private void handleEdit(){
         Engineer selectedEng = engineerTable.getSelectionModel().getSelectedItem();
         if (selectedEng != null){
-            boolean okID =  main.showEngineerEdit(selectedEng);
-            if (okID){
-                System.out.println("all is OK");
-            }else{
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.initOwner(main.getPrimaryStage());
-                alert.setTitle("ID repeated");
-                alert.setHeaderText("ID repeated ");
-                alert.setContentText("Please select another ID for an engineer");
-
-                alert.showAndWait();
-            }
+            main.showEngineerEdit(selectedEng);
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(main.getPrimaryStage());
@@ -129,7 +108,6 @@ public class EngineerOverviewController {
     }
 
     public EngineerOverviewController(){}
-
     @FXML
     public void initialize(){
         g = new ToggleGroup();
@@ -148,5 +126,4 @@ public class EngineerOverviewController {
         this.main = main;
         engineerTable.setItems(main.getEngineers());
     }
-
 }
