@@ -13,6 +13,7 @@ import java.io.File;
 public class RootLayoutController {
 
     private Main main;
+    private EngineerOverviewController controller;
 
     public void setMain(Main main){
         this.main = main;
@@ -68,7 +69,8 @@ public class RootLayoutController {
     private void handleAbout(){
         main.showAboutAuthor();
     }
-
+    @FXML
+    private void handleReset(){}
     public RootLayoutController(){}
     @FXML
     public void initialize(){}

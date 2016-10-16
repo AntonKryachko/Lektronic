@@ -1,5 +1,8 @@
 package sample.view;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import sample.Main;
@@ -35,11 +38,48 @@ public class EngineerOverviewController {
     private TextField deleteUnderAgeField;
     @FXML
     private TextField deleteUnderCatField;
-    private ToggleGroup g;
+    @FXML
+    private TextField filterField;
 
+    public TableView<Engineer> getEngineerTable() {
+        return engineerTable;
+    }
+
+    private ToggleGroup g;
+    private ObservableList<Engineer> ol;
+    public ObservableList<Engineer> getListEngineer(){
+        return ol;
+    }
     @FXML
     private void handleFilter(){
-
+//        main.showFilterTable();
+        String filter = filterField.getText();
+        ObservableList<Engineer> list = main.getEngineers();
+        ol = FXCollections.observableArrayList();
+        if (radioName.isSelected()){
+            for (Engineer eng: list) {
+                if (filter.equals(eng.getName())){
+                    ol.add(eng);
+                }
+            }
+        }else if (radioAge.isSelected()){
+            for (Engineer eng: list) {
+                if (filter.equals(Integer.toString(eng.getAge()))){
+                    ol.add(eng);
+                }
+            }
+        }else if(radioCategory.isSelected()){
+            for (Engineer eng: list) {
+                if (filter.equals(Integer.toString(eng.getCategory()))){
+                    ol.add(eng);
+                }
+            }
+        }
+        engineerTable.setItems(ol);
+    }
+    @FXML
+    private void handleReset(){
+        engineerTable.setItems(main.getEngineers());
     }
     @FXML
     private void handleDeleteUnderAge(){

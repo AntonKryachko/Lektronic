@@ -102,6 +102,8 @@ public class Main extends Application {
             EngineerOverviewController controller = loader.getController();
             controller.setMain(this);
 
+
+
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -243,5 +245,4 @@ public class Main extends Application {
             alert.showAndWait();
         }
     }
-
 }
