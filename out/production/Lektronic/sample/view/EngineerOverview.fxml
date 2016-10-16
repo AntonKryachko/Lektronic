@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.EngineerOverviewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="915.0" stylesheets="@../res/css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.EngineerOverviewController">
    <children>
-      <SplitPane dividerPositions="0.6215538847117794" focusTraversable="false" prefHeight="400.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.5978142076502733" focusTraversable="false" prefHeight="400.0" prefWidth="915.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="450.0">
                <children>
                   <TableView fx:id="engineerTable" prefHeight="398.0" prefWidth="476.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
-                        <TableColumn fx:id="numberColumn" maxWidth="70.0" minWidth="20.0" prefWidth="55.0" text="№" />
-                        <TableColumn fx:id="idColumn" maxWidth="100.0" minWidth="50.0" prefWidth="77.0" text="ID" />
-                        <TableColumn fx:id="nameColumn" maxWidth="500.0" minWidth="50.0" prefWidth="229.0" text="NAME" />
-                        <TableColumn fx:id="ageColumn" maxWidth="70.0" minWidth="30.0" prefWidth="46.0" text="AGE" />
-                        <TableColumn fx:id="categoryColumn" maxWidth="100.0" minWidth="65.0" prefWidth="68.0" text="CATEGORY" />
+                        <TableColumn fx:id="numberColumn" maxWidth="1000.0" minWidth="20.0" prefWidth="45.0" text="№" />
+                        <TableColumn fx:id="idColumn" maxWidth="1000.0" minWidth="50.0" prefWidth="69.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" maxWidth="1000.0" minWidth="50.0" prefWidth="179.0" text="NAME" />
+                        <TableColumn fx:id="ageColumn" maxWidth="10000.0" minWidth="30.0" prefWidth="63.0" text="AGE" />
+                        <TableColumn fx:id="categoryColumn" maxWidth="1000.0" minWidth="65.0" prefWidth="145.0" text="CATEGORY" />
                      </columns>
                   </TableView>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="399.0" prefWidth="371.0" styleClass="background">
                <children>
-                  <Button id="" layoutX="8.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleAdd" styleClass="add-btn" text="Add" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
-                  <Button id="special" layoutX="99.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleSpecial" text="Special" AnchorPane.bottomAnchor="5.0" />
-                  <RadioButton id="category_f" fx:id="radioCategory" layoutX="76.0" layoutY="30.0" mnemonicParsing="false" text="Category" />
-                  <RadioButton id="age_f" fx:id="radioAge" layoutX="76.0" layoutY="9.0" mnemonicParsing="false" text="Age" AnchorPane.topAnchor="9.0" />
-                  <RadioButton id="name_f" fx:id="radioName" layoutX="126.0" layoutY="9.0" mnemonicParsing="false" text="Name" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="9.0" />
+                  <RadioButton id="category_f" fx:id="radioCategory" layoutX="218.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Category" />
+                  <RadioButton id="age_f" fx:id="radioAge" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Age" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="10.0" />
+                  <RadioButton id="name_f" fx:id="radioName" layoutX="100.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Name" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="10.0" />
                   <Label layoutX="9.0" layoutY="8.0" text="Filtering by:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="8.0" />
-                  <TextField fx:id="filterLabel" layoutX="9.0" layoutY="55.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter text" />
-                  <Button layoutX="173.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleFilter" text="OK" />
-                  <Button layoutX="53.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleEdit" text="Edit" AnchorPane.bottomAnchor="5.0" />
-                  <Button id="id_d" layoutX="163.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleDeleteById" text="Delete" AnchorPane.bottomAnchor="5.0" />
-                  <Button id="id_d" layoutX="164.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleDeleteUnderCat" text="Delete" />
-                  <TextField fx:id="deleteUnderCatField" layoutX="10.0" layoutY="168.0" prefHeight="24.0" prefWidth="145.0" promptText="Enter category" styleClass="text-field" AnchorPane.leftAnchor="10.0" />
-                  <Label layoutX="10.0" layoutY="148.0" text="Remove lower Category" AnchorPane.leftAnchor="10.0" />
-                  <Button id="id_d" layoutX="164.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleDeleteUnderAge" text="Delete" />
-                  <TextField fx:id="deleteUnderAgeField" layoutX="8.0" layoutY="112.0" prefHeight="24.0" prefWidth="145.0" promptText="Enter id" styleClass="text-field" AnchorPane.leftAnchor="10.0" />
-                  <Label layoutX="8.0" layoutY="90.0" text="Remove lower Age" AnchorPane.leftAnchor="10.0" />
+                  <TextField fx:id="filterLabel" layoutX="9.0" layoutY="37.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter text" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="37.0" />
+                  <Button layoutX="174.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleFilter" text="OK" AnchorPane.leftAnchor="174.0" AnchorPane.topAnchor="39.0" />
+                  <Button id="id_d" layoutX="163.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleDeleteUnderCat" text="Delete" AnchorPane.leftAnchor="163.0" AnchorPane.topAnchor="197.0" />
+                  <HBox layoutX="3.0" layoutY="363.0" prefHeight="33.0" prefWidth="347.0" spacing="5.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                     <children>
+                        <Button id="" mnemonicParsing="false" onAction="#handleAdd" styleClass="add-btn" text="Add" />
+                        <Button id="special" mnemonicParsing="false" onAction="#handleSpecial" text="Special" />
+                        <Button mnemonicParsing="false" onAction="#handleEdit" text="Edit" />
+                        <Button id="id_d" mnemonicParsing="false" onAction="#handleDeleteById" text="Delete" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="deleteUnderCatField" layoutX="8.0" layoutY="199.0" prefHeight="24.0" prefWidth="145.0" promptText="Enter category" styleClass="text-field" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="195.0" />
+                  <Label layoutX="9.0" layoutY="169.0" text="Remove lower Category" AnchorPane.leftAnchor="9.0" />
+                  <Button id="id_d" layoutX="163.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleDeleteUnderAge" text="Delete" AnchorPane.leftAnchor="163.0" AnchorPane.topAnchor="122.0" />
+                  <TextField fx:id="deleteUnderAgeField" layoutX="8.0" layoutY="120.0" prefHeight="24.0" prefWidth="145.0" promptText="Enter id" styleClass="text-field" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="120.0" />
+                  <Label layoutX="8.0" layoutY="95.0" text="Remove lower Age" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="95.0" />
+                  <Separator layoutX="1.0" layoutY="74.0" prefHeight="21.0" prefWidth="364.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
         </items>

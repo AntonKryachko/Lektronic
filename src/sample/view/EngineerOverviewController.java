@@ -1,6 +1,5 @@
 package sample.view;
 
-import javafx.beans.property.IntegerProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import sample.Main;
@@ -12,7 +11,7 @@ import sample.model.Engineer;
 public class EngineerOverviewController {
 
     private Main main;
-
+    private int number = 0;
     @FXML
     private TableView<Engineer> engineerTable;
     @FXML
@@ -37,7 +36,7 @@ public class EngineerOverviewController {
     @FXML
     private TextField deleteUnderCatField;
     private ToggleGroup g;
-    private int number = 0;
+
     @FXML
     private void handleFilter(){
 

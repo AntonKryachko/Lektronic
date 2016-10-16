@@ -68,9 +68,8 @@ public class RootLayoutController {
     private void handleAbout(){
         main.showAboutAuthor();
     }
+
     public RootLayoutController(){}
     @FXML
-    public void initialize(){
-
-    }
+    public void initialize(){}
 }

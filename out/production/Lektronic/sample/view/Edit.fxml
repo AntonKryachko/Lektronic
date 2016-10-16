@@ -35,8 +35,8 @@
       </GridPane>
       <HBox layoutX="131.0" layoutY="206.0" prefHeight="33.0" prefWidth="169.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="69.0" text="OK" />
-            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="69.0" text="OK" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
          </children>
       </HBox>
    </children>

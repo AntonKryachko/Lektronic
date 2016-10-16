@@ -42,7 +42,6 @@ public class EditController {
         ageField.setText(Integer.toString(engineer.getAge()));
         categoryField.setText(Integer.toString(engineer.getCategory()));
     }
-
     private boolean isInputValid(){
         String errorString = "";
 

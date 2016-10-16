@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-
+<?import javafx.scene.layout.*?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="314.0" styleClass="background" stylesheets="@../res/css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.EditController">
    <children>
       <GridPane layoutX="14.0" prefHeight="192.0" prefWidth="271.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="0.0">
@@ -20,7 +13,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <TextField fx:id="idField" promptText="Enter ID" GridPane.columnIndex="1" />
@@ -35,8 +28,8 @@
       </GridPane>
       <HBox layoutX="131.0" layoutY="206.0" prefHeight="33.0" prefWidth="169.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="69.0" text="OK" />
-            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="69.0" text="OK" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
          </children>
       </HBox>
    </children>
