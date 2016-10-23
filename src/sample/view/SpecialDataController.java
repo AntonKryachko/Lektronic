@@ -44,42 +44,33 @@ public class SpecialDataController {
             sum1cat.setText(Integer.toString(sumCat1()));
             sum2cat.setText(Integer.toString(sumCat2()));
             sum3cat.setText(Integer.toString(sumCat3()));
-            maxAge.setText(Integer.toString(findMaxAge()));
-            minAge.setText(Integer.toString(findMinAge()));
-        } else {
+//            maxAge.setText(Integer.toString(findMaxAge()));
+//            minAge.setText(Integer.toString(findMinAge()));
+        }else {
             sum1cat.setText("Unknown");
             sum2cat.setText("Unknown");
             sum3cat.setText("Unknown");
             maxAge.setText("Unknown");
             minAge.setText("Unknown");
         }
+
     }
 
     private int sumCat1(){
         int i = 0;
-        for(Engineer eng: list){
-            if (eng.getCategory() == 1){
-                i++;
-            }
+        for (Engineer engineer: list){
+            System.out.println(engineer);
         }
         return i;
     }
     private int sumCat2(){
         int i = 0;
-        for(Engineer eng: list){
-            if (eng.getCategory() == 2){
-                i++;
-            }
-        }
+
         return i;
     }
     private int sumCat3(){
         int i = 0;
-        for(Engineer eng: list){
-            if (eng.getCategory() == 3){
-                i++;
-            }
-        }
+
         return i;
     }
 

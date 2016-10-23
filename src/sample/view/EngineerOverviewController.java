@@ -1,6 +1,5 @@
 package sample.view;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -41,41 +40,34 @@ public class EngineerOverviewController {
     @FXML
     private TextField filterField;
 
-    public TableView<Engineer> getEngineerTable() {
-        return engineerTable;
-    }
-
     private ToggleGroup g;
-    private ObservableList<Engineer> ol;
-    public ObservableList<Engineer> getListEngineer(){
-        return ol;
-    }
+
     @FXML
     private void handleFilter(){
-//        main.showFilterTable();
         String filter = filterField.getText();
-        ObservableList<Engineer> list = main.getEngineers();
-        ol = FXCollections.observableArrayList();
+//        ObservableList<Engineer> list = main.getEngineers();
+        ObservableList<Engineer> ol = FXCollections.observableArrayList();
         if (radioName.isSelected()){
-            for (Engineer eng: list) {
+            for (Engineer eng: main.getEngineers()) {
                 if (filter.equals(eng.getName())){
                     ol.add(eng);
                 }
             }
         }else if (radioAge.isSelected()){
-            for (Engineer eng: list) {
+            for (Engineer eng: main.getEngineers()) {
                 if (filter.equals(Integer.toString(eng.getAge()))){
                     ol.add(eng);
                 }
             }
         }else if(radioCategory.isSelected()){
-            for (Engineer eng: list) {
+            for (Engineer eng: main.getEngineers()) {
                 if (filter.equals(Integer.toString(eng.getCategory()))){
                     ol.add(eng);
                 }
             }
         }
         engineerTable.setItems(ol);
+        filterField.setText("");
     }
     @FXML
     private void handleReset(){
@@ -83,26 +75,15 @@ public class EngineerOverviewController {
     }
     @FXML
     private void handleDeleteUnderAge(){
-        int age = Integer.parseInt(deleteUnderAgeField.getText());
-        for (Engineer eng: main.getEngineers()){
-            if (eng.getAge() == age){
-                main.getEngineers().remove(eng);
-            }
-        }
+        main.removeUnder(Integer.parseInt(deleteUnderAgeField.getText()),true);
         engineerTable.setItems(main.getEngineers());
-
+        deleteUnderAgeField.setText("");
     }
     @FXML
     private void handleDeleteUnderCat(){
-        int category = Integer.parseInt(deleteUnderCatField.getText());
-        for (Engineer eng: main.getEngineers()){
-            if (eng.getCategory() == category){
-                main.getEngineers().remove(eng);
-            }
-        }
+        main.removeUnder(Integer.parseInt(deleteUnderCatField.getText()),false);
         engineerTable.setItems(main.getEngineers());
-
-
+        deleteUnderCatField.setText("");
     }
     @FXML
     private void handleSpecial(){

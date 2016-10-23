@@ -27,37 +27,35 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private ObservableList<Engineer> engineers = FXCollections.observableArrayList();
-//    private ObservableSet<Engineer> observableSet = FXCollections.emptyObservableSet();
+//    private ObservableSet<Engineer> observableSet = FXCollections.observableSet((Set)engineers);
 
     public static void main(String[] args) {launch(args);}
     public ObservableList<Engineer> getEngineers() {return engineers;}
     public Stage getPrimaryStage() {return primaryStage;}
 
     public Main(){
-//        engineers.addAll(
-//                new Engineer(48877, "Клим",13,2),
-//                new Engineer(57677,"Жуков",10,2),
-//                new Engineer(15411,"Чехов",2,1),
-//                new Engineer(32521,"Пучков",6,1),
-//                new Engineer(21344,"Поттер",4,1),
-//                new Engineer(12314,"Наумов",11,2),
-//                new Engineer(21346,"Слуцкий",9,2),
-//                new Engineer(41131,"Сосюра",20,3),
-//                new Engineer(3182,"Норбобаев",10,2),
-//                new Engineer(45613,"Беггинс",7,1),
-//                new Engineer(54613,"Петров",8,2),
-//                new Engineer(15431,"Степанянов",6,1),
-//                new Engineer(12314,"Ретушив",2,1),
-//                new Engineer(47531,"Авдеев",15,2),
-//                new Engineer(37981,"Нигородский",21,3),
-//                new Engineer(31333,"Луговьев",14,2),
-//                new Engineer(52352,"Корнедев",4,1),
-//                new Engineer(12948,"Дурнев",15,3),
-//                new Engineer(25463,"Бурев",11,2),
-//                new Engineer(27364,"Топор",24,3)
-//
-//
-//        );
+        engineers.addAll(
+                new Engineer(48877, "Клим",13,2),
+                new Engineer(57677,"Жуков",10,2),
+                new Engineer(15411,"Чехов",2,1),
+                new Engineer(32521,"Пучков",6,1),
+                new Engineer(21344,"Поттер",4,1),
+                new Engineer(12314,"Наумов",11,2),
+                new Engineer(21346,"Слуцкий",9,2),
+                new Engineer(41131,"Сосюра",20,3),
+                new Engineer(3182,"Норбобаев",10,2),
+                new Engineer(45613,"Беггинс",7,1),
+                new Engineer(54613,"Петров",8,2),
+                new Engineer(15431,"Степанянов",6,1),
+                new Engineer(12314,"Ретушив",2,1),
+                new Engineer(47531,"Авдеев",15,2),
+                new Engineer(37981,"Нигородский",21,3),
+                new Engineer(31333,"Луговьев",14,2),
+                new Engineer(52352,"Корнедев",4,1),
+                new Engineer(12948,"Дурнев",15,3),
+                new Engineer(25463,"Бурев",11,2),
+                new Engineer(27364,"Топор",24,3)
+        );
     }
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -69,7 +67,6 @@ public class Main extends Application {
 
         showEngineerOverview();
     }
-
     public void initRootLayout(){
         try{
             FXMLLoader loader = new FXMLLoader();
@@ -101,7 +98,6 @@ public class Main extends Application {
 
             EngineerOverviewController controller = loader.getController();
             controller.setMain(this);
-
 
 
         }catch (IOException e){
@@ -244,5 +240,23 @@ public class Main extends Application {
 
             alert.showAndWait();
         }
+    }
+
+    public void removeUnder(int value, boolean isAge){
+        ObservableList<Engineer> list = FXCollections.observableArrayList();
+        if (isAge){
+            for (Engineer engineer: engineers){
+                if (engineer.getAge() >= value){
+                    list.add(engineer);
+                }
+            }
+        }else{
+            for (Engineer engineer: engineers){
+                if (engineer.getCategory() >= value){
+                    list.add(engineer);
+                }
+            }
+        }
+        engineers = list;
     }
 }
