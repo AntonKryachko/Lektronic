@@ -52,7 +52,7 @@ public class EditController {
                 if (isIDRepeat(Integer.parseInt(idField.getText()))){
                     errorString += "No valid ID (not to be repeated)\n";
                 }
-            }catch (NullPointerException e){
+            }catch (NumberFormatException e){
                 errorString += "No valid ID (must be an integer)\n";
             }
         }
@@ -64,7 +64,7 @@ public class EditController {
         }else{
             try{
                 Integer.parseInt(ageField.getText());
-            }catch (NullPointerException e){
+            }catch (NumberFormatException e){
                 errorString += "No valid AGE (must be an integer)\n";
             }
         }
@@ -73,7 +73,7 @@ public class EditController {
         }else{
             try{
                 Integer.parseInt(categoryField.getText());
-            }catch (NullPointerException e){
+            }catch (NumberFormatException e){
                 errorString += "No valid CATEGORY (must be an integer)\n";
             }
         }
@@ -119,11 +119,7 @@ public class EditController {
     private void handleCancel(){
         editStage.close();
     }
-
     public EditController(){}
-
     @FXML
-    public void initialize(){
-
-    }
+    public void initialize(){}
 }
