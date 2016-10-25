@@ -37,21 +37,18 @@ public class Engineer implements Comparable<Engineer>{
         this.age = new SimpleIntegerProperty(0);
         this.category = new SimpleIntegerProperty(0);
     }
-
     public Engineer(int id, String name, int age, int category) {
         this.id = new SimpleIntegerProperty(id);
         this.name = new SimpleStringProperty(name);
         this.age = new SimpleIntegerProperty(age);
         this.category = new SimpleIntegerProperty(category);
     }
-
     @Override
     public int compareTo(Engineer e) {
         if (id.getValue() > e.getId()) return 1;
         else if (id.getValue() < e.getId()) return -1;
         else return 0;
     }
-
     @Override
     public boolean equals(Object o) {
         if (getClass() != o) return false;
@@ -60,10 +57,8 @@ public class Engineer implements Comparable<Engineer>{
         Engineer engineer = (Engineer) o;
         return getId() == engineer.getId();
     }
-
     @Override
     public int hashCode() {return getId();}
-
     @Override
     public String toString(){return String.format(INFO_ENG, id.get(), name.get(), age.get(), category.get());}
 }

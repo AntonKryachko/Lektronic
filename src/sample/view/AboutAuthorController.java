@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 /**
  * Created by Lektor on 10.10.2016.
  */
+
 public class AboutAuthorController {
 
     private Stage authorStage;

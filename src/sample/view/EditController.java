@@ -11,7 +11,6 @@ import sample.model.Engineer;
  * Created by Lektor on 10.10.2016.
  */
 public class EditController {
-
     @FXML
     private TextField idField;
     @FXML
@@ -24,7 +23,6 @@ public class EditController {
     private boolean okClicked = false;
     private Stage editStage;
     private Engineer engineer;
-
     private Main main;
 
     public void setMain(Main main) {this.main = main;}
@@ -98,11 +96,7 @@ public class EditController {
                 i++;
             }
         }
-        if (i > 0){
-            return true;
-        }else{
-            return false;
-        }
+        return i > 0;
     }
     @FXML
     private void handleOk(){

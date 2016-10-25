@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import sample.Main;
 import sample.model.Engineer;
+import sample.model.Sort.CompCatAscAgeDesc;
+import sample.model.Sort.CompCatDescAgeAsc;
+import sample.model.Sort.CompNameAscAgeDesc;
 
 /**
  * Created by Lektor on 10.10.2016.
@@ -116,7 +119,6 @@ public class EngineerOverviewController {
             engineerTable.setItems(ol);
             filterField.setText("");
         }
-
     }
     @FXML
     private void handleReset() {
@@ -142,7 +144,7 @@ public class EngineerOverviewController {
             main.removeUnder(Integer.parseInt(removeUnderAge), true);
             engineerTable.setItems(main.getEngineers());
         } else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.initOwner(main.getPrimaryStage());
             alert.setTitle("Invalid Age!");
             alert.setHeaderText("Entered Age invalid");
@@ -171,7 +173,7 @@ public class EngineerOverviewController {
             main.removeUnder(Integer.parseInt(removeUnderCategory), false);
             engineerTable.setItems(main.getEngineers());
         } else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.initOwner(main.getPrimaryStage());
             alert.setTitle("Invalid Category!");
             alert.setHeaderText("Entered Category invalid");
@@ -234,6 +236,7 @@ public class EngineerOverviewController {
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         ageColumn.setCellValueFactory(cellData -> cellData.getValue().ageProperty().asObject());
         categoryColumn.setCellValueFactory(cellData -> cellData.getValue().categoryProperty().asObject());
+
     }
     public void setMain(Main main) {
         this.main = main;

@@ -21,8 +21,6 @@ public class IO {
                 throw new RuntimeException(e);
         }
     }
-
-
     public static String read(String path) throws FileNotFoundException{
         StringBuilder sb = new StringBuilder();
         exists(path);
@@ -37,13 +35,11 @@ public class IO {
         }
         return sb.toString();
     }
-
     private static void exists(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         if (!file.exists())
             throw new FileNotFoundException(file.getName());
     }
-
     public static void updateFile(String fileName, String e) throws IOException {
         exists(fileName);
         StringBuilder sb = new StringBuilder();
@@ -52,7 +48,6 @@ public class IO {
         sb.append(e);
         write(fileName, sb.toString());
     }
-
     public static void delete(String path) throws FileNotFoundException{
         exists(path);
         new File(path).delete();

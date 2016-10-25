@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
 import sample.Main;
 
-
 import java.io.File;
 
 /**

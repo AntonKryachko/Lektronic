@@ -29,10 +29,10 @@ public class SpecialDataController {
     public void setSpecialStage(Stage specialStage){
         this.specialStage = specialStage;
     }
+    public void setMain(Main main){this.main = main;}
     public void setEngineers(ObservableList<Engineer> list){
         this.list = list;
     }
-    public void setMain(Main main){this.main = main;}
     @FXML
     private void handleClose(){
         specialStage.close();
@@ -40,56 +40,61 @@ public class SpecialDataController {
 
     @FXML
     public void initialize() {
-        if (list != null) {
-            sum1cat.setText(Integer.toString(sumCat1()));
-            sum2cat.setText(Integer.toString(sumCat2()));
-            sum3cat.setText(Integer.toString(sumCat3()));
-//            maxAge.setText(Integer.toString(findMaxAge()));
-//            minAge.setText(Integer.toString(findMinAge()));
-        }else {
+        if (list == null) {
             sum1cat.setText("Unknown");
             sum2cat.setText("Unknown");
             sum3cat.setText("Unknown");
             maxAge.setText("Unknown");
             minAge.setText("Unknown");
+        } else {
+            sum1cat.setText(Integer.toString(sumCat1()));
+            sum2cat.setText(Integer.toString(sumCat2()));
+            sum3cat.setText(Integer.toString(sumCat3()));
+            maxAge.setText(Integer.toString(findMaxAge()));
+            minAge.setText(Integer.toString(findMinAge()));
         }
-
     }
-
     private int sumCat1(){
         int i = 0;
         for (Engineer engineer: list){
-            System.out.println(engineer);
+            if (engineer.getCategory() == 1){
+                i++;
+            }
         }
         return i;
     }
     private int sumCat2(){
         int i = 0;
-
+        for (Engineer engineer: list){
+            if (engineer.getCategory() == 2){
+                i++;
+            }
+        }
         return i;
     }
     private int sumCat3(){
         int i = 0;
-
+        for (Engineer engineer: list){
+            if (engineer.getCategory() == 3){
+                i++;
+            }
+        }
         return i;
     }
-
     private int findMaxAge(){
         int max = 0;
-        Engineer eng;
-        for (Engineer e: list){
-            if (e.getAge() > max) {
-                max = e.getAge();
+        for (Engineer engineer: list){
+            if (engineer.getAge() > max){
+                max = engineer.getAge();
             }
         }
         return max;
     }
     private int findMinAge(){
         int min = 200;
-        Engineer eng;
-        for (Engineer e: list){
-            if (e.getAge() < min) {
-                min = e.getAge();
+        for (Engineer engineer: list){
+            if (engineer.getAge() < min){
+                min = engineer.getAge();
             }
         }
         return min;

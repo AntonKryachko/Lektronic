@@ -71,7 +71,7 @@ public class Main extends Application {
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/RootLayout.fxml"));
-            rootLayout = (BorderPane) loader.load();
+            rootLayout = loader.load();
 
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
@@ -92,14 +92,12 @@ public class Main extends Application {
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/EngineerOverview.fxml"));
-            AnchorPane engineerOverview = (AnchorPane) loader.load();
+            AnchorPane engineerOverview = loader.load();
 
             rootLayout.setCenter(engineerOverview);
 
             EngineerOverviewController controller = loader.getController();
             controller.setMain(this);
-
-
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -108,7 +106,7 @@ public class Main extends Application {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/Edit.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
 
             Stage editStage = new Stage();
             editStage.setTitle("Edit engineer");
@@ -147,11 +145,11 @@ public class Main extends Application {
             authorStage.setScene(scene);
             authorStage.getIcons().add(new Image("sample/res/images/holybible.png"));
             authorStage.setResizable(false);
+
             AboutAuthorController controller = loader.getController();
             controller.setAuthorStage(authorStage);
 
-            authorStage.show();
-
+            authorStage.showAndWait();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -241,7 +239,6 @@ public class Main extends Application {
             alert.showAndWait();
         }
     }
-
     public void removeUnder(int value, boolean isAge){
         ObservableList<Engineer> list = FXCollections.observableArrayList();
         if (isAge){

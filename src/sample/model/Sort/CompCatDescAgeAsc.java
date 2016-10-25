@@ -5,10 +5,9 @@ import sample.model.Engineer;
 import java.util.Comparator;
 
 /**
- * Created by Lektor on 28.09.2016.
+ * Created by Lektor on 23.10.2016.
  */
-
-public class CompCatAscAgeDesc implements Comparator<Engineer> {
+public class CompCatDescAgeAsc implements Comparator<Engineer>{
     @Override
     public int compare(Engineer o1, Engineer o2) {
         if (o1.getCategory() > o2.getCategory()) return 1;
