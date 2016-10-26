@@ -5,13 +5,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import sample.Main;
+import sample.model.AlertData;
 import sample.model.Engineer;
-import sample.model.Sort.CompCatAscAgeDesc;
-import sample.model.Sort.CompCatDescAgeAsc;
-import sample.model.Sort.CompNameAscAgeDesc;
 
 /**
- * Created by Lektor on 10.10.2016.
+ * @author Lektor on 10.10.2016.
  */
 public class EngineerOverviewController {
     private Main main;
@@ -82,12 +80,12 @@ public class EngineerOverviewController {
         if (errorMsg.length() == 0) {
             return true;
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("Invalid Filter!");
-            alert.setHeaderText("Entered Filter invalid");
-            alert.setContentText(errorMsg);
-            alert.showAndWait();
+            new AlertData(
+                    main.getPrimaryStage(),
+                    "Invalid Filter!",
+                    "Entered Filter invalid",
+                    errorMsg,
+                    Alert.AlertType.ERROR);
             return false;
         }
     }
@@ -144,12 +142,13 @@ public class EngineerOverviewController {
             main.removeUnder(Integer.parseInt(removeUnderAge), true);
             engineerTable.setItems(main.getEngineers());
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("Invalid Age!");
-            alert.setHeaderText("Entered Age invalid");
-            alert.setContentText(errorMSG);
-            alert.showAndWait();
+            new AlertData(
+                    main.getPrimaryStage(),
+                    "Invalid Age!",
+                    "Entered Age invalid",
+                    errorMSG,
+                    Alert.AlertType.ERROR
+            );
         }
         deleteUnderAgeField.setText("");
     }
@@ -173,12 +172,13 @@ public class EngineerOverviewController {
             main.removeUnder(Integer.parseInt(removeUnderCategory), false);
             engineerTable.setItems(main.getEngineers());
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("Invalid Category!");
-            alert.setHeaderText("Entered Category invalid");
-            alert.setContentText(errorMSG);
-            alert.showAndWait();
+            new AlertData(
+                    main.getPrimaryStage(),
+                    "Invalid Category!",
+                    "Entered Category invalid",
+                    errorMSG,
+                    Alert.AlertType.ERROR
+            );
         }
         deleteUnderCatField.setText("");
     }
@@ -200,13 +200,13 @@ public class EngineerOverviewController {
         if (selectedEng != null) {
             main.showEngineerEdit(selectedEng);
         } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("No Selection");
-            alert.setHeaderText("No Engineer Selected");
-            alert.setContentText("Please select a engineer in the table");
-
-            alert.showAndWait();
+            new AlertData(
+                    main.getPrimaryStage(),
+                    "No Selection",
+                    "No Engineer Selected",
+                    "Please select a engineer in the table",
+                    Alert.AlertType.WARNING
+            );
         }
     }
     @FXML
@@ -215,12 +215,13 @@ public class EngineerOverviewController {
         if (selectedEng >= 0) {
             engineerTable.getItems().remove(selectedEng);
         } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("No Selection");
-            alert.setHeaderText("No Engineer Selected");
-            alert.setContentText("Please select a engineer in the table");
-            alert.showAndWait();
+            new AlertData(
+                    main.getPrimaryStage(),
+                    "No Selection",
+                    "No Engineer Selected",
+                    "Please select a engineer in the table",
+                    Alert.AlertType.WARNING
+            );
         }
     }
     public EngineerOverviewController() {}
@@ -240,6 +241,7 @@ public class EngineerOverviewController {
     }
     public void setMain(Main main) {
         this.main = main;
+        FXCollections.sort(main.getEngineers());
         engineerTable.setItems(main.getEngineers());
     }
 }

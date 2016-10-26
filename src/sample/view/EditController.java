@@ -5,10 +5,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.Main;
+import sample.model.AlertData;
 import sample.model.Engineer;
 
 /**
- * Created by Lektor on 10.10.2016.
+ * @author  Lektor on 10.10.2016.
  */
 public class EditController {
     @FXML
@@ -78,14 +79,13 @@ public class EditController {
         if (errorString.length() == 0){
             return true;
         }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.initOwner(editStage);
-            alert.setTitle("Invalid Fields");
-            alert.setHeaderText("Please correct invalid fields");
-            alert.setContentText(errorString);
-
-            alert.showAndWait();
-
+            new AlertData(
+                    editStage,
+                    "Invalid Fields",
+                    "Please correct invalid fields",
+                    errorString,
+                    Alert.AlertType.ERROR
+            );
             return false;
         }
     }

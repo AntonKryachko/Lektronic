@@ -67,7 +67,7 @@ public class Main extends Application {
 
         showEngineerOverview();
     }
-    public void initRootLayout(){
+    private void initRootLayout(){
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/RootLayout.fxml"));
@@ -88,7 +88,7 @@ public class Main extends Application {
             loadEngineerDataFromFile(file);
         }
     }
-    public void showEngineerOverview(){
+    private void showEngineerOverview(){
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/EngineerOverview.fxml"));

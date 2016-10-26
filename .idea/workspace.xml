@@ -2,34 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/model/Sort/CompCatAscIdDesc.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/res/text/Engineers.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscIdDesc.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/res/text/Engineers.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/model/AlertData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/model/Engineer.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/model/Engineer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/model/IO.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/model/IO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/model/Sort/CompCatAscAgeDesc.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/model/Sort/CompCatAscAgeDesc.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/AboutAuthorController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/AboutAuthorController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EditController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EditController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayoutController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayoutController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/SpecialDataController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/SpecialDataController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverview.fxml" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverview.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayout.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Engineer.java" afterPath="$PROJECT_DIR$/src/sample/model/Engineer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/IO.java" afterPath="$PROJECT_DIR$/src/sample/model/IO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" afterPath="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" afterPath="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/EditController.java" afterPath="$PROJECT_DIR$/src/sample/view/EditController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml" afterPath="$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java" afterPath="$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/sample/view/RootLayout.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/sample/view/RootLayoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/SpecialDataController.java" afterPath="$PROJECT_DIR$/src/sample/view/SpecialDataController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,15 +76,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="156" column="33" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
+            <state relative-caret-position="551">
+              <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
               <folding>
-                <element signature="method#Main#0;class#Main#0" expanded="false" />
                 <element signature="method#start#0;class#Main#0" expanded="false" />
-                <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
                 <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
                 <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
                 <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
@@ -119,17 +97,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EngineerOverviewController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlertData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/model/AlertData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/view/EditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+              <folding>
+                <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
+                <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
+                <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EngineerOverviewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="242" column="50" selection-start-line="242" selection-start-column="50" selection-end-line="242" selection-end-column="50" />
+            <state relative-caret-position="121">
+              <caret line="171" column="46" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
               <folding>
-                <element signature="docComment;class#EngineerOverviewController#0" expanded="false" />
+                <element signature="imports" expanded="false" />
                 <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
                 <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
                 <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
                 <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
                 <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
@@ -184,15 +186,16 @@
         <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" />
         <option value="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" />
         <option value="$PROJECT_DIR$/src/sample/res/text/Engineers.txt" />
-        <option value="$PROJECT_DIR$/src/sample/view/EditController.java" />
         <option value="$PROJECT_DIR$/src/sample/model/IO.java" />
         <option value="$PROJECT_DIR$/src/sample/model/Engineer.java" />
         <option value="$PROJECT_DIR$/src/sample/view/SpecialDataController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java" />
         <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java" />
         <option value="$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/model/AlertData.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/EditController.java" />
         <option value="$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
   </component>
@@ -208,10 +211,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -244,8 +247,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,8 +327,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lektronic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lektronic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sort" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,7 +372,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../asd/Lektronic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proga" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -664,22 +693,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18678816" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32636657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928804" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -712,9 +741,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add AlertData class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add AlertData class" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -723,23 +757,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/view/SpecialDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="method#sumCat1#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#sumCat2#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#sumCat3#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#findMaxAge#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#findMinAge#0;class#SpecialDataController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -787,9 +804,7 @@
         <state relative-caret-position="816">
           <caret line="120" column="54" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="54" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
@@ -827,7 +842,6 @@
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
-            <element signature="method#isInputValid#0;class#EditController#0" expanded="false" />
             <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
             <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
           </folding>
@@ -852,9 +866,7 @@
         <state relative-caret-position="1326">
           <caret line="95" column="19" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
@@ -892,7 +904,6 @@
           <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
           <folding>
             <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
-            <element signature="method#isInputValid#0;class#EditController#0" expanded="false" />
             <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
             <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
           </folding>
@@ -939,9 +950,7 @@
         <state relative-caret-position="85">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
@@ -991,9 +1000,7 @@
         <state relative-caret-position="68">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
@@ -1037,36 +1044,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Filter.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/view/FilterController.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="method#handleNew#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/res/text/Engineers.txt" />
     <entry file="file://$PROJECT_DIR$/src/sample/res/text/EngineersUTF_8.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="14" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthor.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Edit.fxml">
@@ -1102,13 +1085,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/IO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/EngineerListWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1130,19 +1106,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatAscIdDesc.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EditController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
-          <folding>
-            <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
-            <element signature="method#isInputValid#0;class#EditController#0" expanded="false" />
-            <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
-            <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1161,7 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,35 +1131,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
     <entry file="file://$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#10142#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,8 +1158,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthor.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthorController.java">
@@ -1230,7 +1182,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/SpecialDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="-126">
           <caret line="32" column="28" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1245,14 +1197,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="method#handleNew#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/IO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/AlertData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/EditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding>
+            <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
+            <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
+            <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="171" column="46" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="156" column="33" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
+        <state relative-caret-position="551">
+          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
@@ -1262,24 +1271,6 @@
             <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#saveEngineersDataToFile#0;class#Main#0" expanded="false" />
             <element signature="method#removeUnder#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="242" column="50" selection-start-line="242" selection-start-column="50" selection-end-line="242" selection-end-column="50" />
-          <folding>
-            <element signature="docComment;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
           </folding>
         </state>
       </provider>
