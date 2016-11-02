@@ -2,14 +2,21 @@ package sample.view;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.TableColumn.SortType;
 import sample.Main;
 import sample.model.AlertData;
 import sample.model.Engineer;
+import sample.model.Sort.CompCatAscAgeDesc;
+import sample.model.Sort.CompCatAscAgeDescNameAsc;
+import sample.model.Sort.CompNameAscAgeDesc;
+
+import java.util.Comparator;
 
 /**
- * @author Lektor on 10.10.2016.
+ * @author Lektor
  */
 public class EngineerOverviewController {
     private Main main;
@@ -42,6 +49,17 @@ public class EngineerOverviewController {
 
     private ToggleGroup g;
 
+    private SortType c;
+
+    @FXML
+    private void handleSortTable() {
+
+    }
+    @FXML
+    private void handleSortCat(){
+        main.getEngineers().sort(new CompCatAscAgeDescNameAsc());
+        engineerTable.setItems(main.getEngineers());
+    }
     private boolean isValidFilterField() {
         String filter = filterField.getText(),
                 errorMsg = "";
@@ -233,6 +251,7 @@ public class EngineerOverviewController {
         radioCategory.setToggleGroup(g);
         radioName.setSelected(true);
 
+//        numberColumn.setCellValueFactory(cellData -> cellData.getTableColumn());
         idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         ageColumn.setCellValueFactory(cellData -> cellData.getValue().ageProperty().asObject());
@@ -244,4 +263,5 @@ public class EngineerOverviewController {
         FXCollections.sort(main.getEngineers());
         engineerTable.setItems(main.getEngineers());
     }
+
 }

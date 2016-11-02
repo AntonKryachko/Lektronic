@@ -7,7 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- * Created by Lektor on 25.09.2016.
+ * @author Lektor
  */
 public class Engineer implements Comparable<Engineer>{
     private IntegerProperty id;

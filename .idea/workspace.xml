@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/model/AlertData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EditController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EditController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/SpecialDataController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/view/Special.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/view/SpecialDataController.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayoutController.class" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayoutController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverview.fxml" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverview.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/RootLayout.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lektronic/sample/view/Special.fxml" afterPath="$PROJECT_DIR$/out/production/Lektronic/sample/view/Special.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Engineer.java" afterPath="$PROJECT_DIR$/src/sample/model/Engineer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/EngineerListWrapper.java" afterPath="$PROJECT_DIR$/src/sample/model/EngineerListWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/IO.java" afterPath="$PROJECT_DIR$/src/sample/model/IO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" afterPath="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java" afterPath="$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Sort/CompNameAscAgeDesc.java" afterPath="$PROJECT_DIR$/src/sample/model/Sort/CompNameAscAgeDesc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java" afterPath="$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" afterPath="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/EditController.java" afterPath="$PROJECT_DIR$/src/sample/view/EditController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml" afterPath="$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java" afterPath="$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/sample/view/RootLayout.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/sample/view/RootLayoutController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,14 +95,15 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+            <state relative-caret-position="188">
+              <caret line="160" column="34" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
               <folding>
+                <element signature="method#Main#0;class#Main#0" expanded="false" />
                 <element signature="method#start#0;class#Main#0" expanded="false" />
+                <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
                 <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
                 <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
                 <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-                <element signature="method#showSpecialData#0;class#Main#0" expanded="false" />
                 <element signature="method#getEngineerFilePath#0;class#Main#0" expanded="false" />
                 <element signature="method#setEngineerFilePath#0;class#Main#0" expanded="false" />
                 <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />
@@ -97,45 +114,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlertData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/model/AlertData.java">
+      <file leaf-file-name="SpecialController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/view/SpecialController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="143">
+              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/view/EditController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-              <folding>
-                <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
-                <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
-                <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EngineerOverviewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="171" column="46" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-                <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
+                <element signature="e#990#991#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#1074#1075#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="method#sum1cat#0;class#SpecialController#0" expanded="false" />
+                <element signature="method#sum2cat#0;class#SpecialController#0" expanded="false" />
+                <element signature="method#sum3cat#0;class#SpecialController#0" expanded="false" />
+                <element signature="method#maxAge#0;class#SpecialController#0" expanded="false" />
+                <element signature="method#minAge#0;class#SpecialController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -146,6 +140,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -177,24 +172,29 @@
         <option value="$PROJECT_DIR$/src/sample/model/EngineerListWripper.java" />
         <option value="$PROJECT_DIR$/src/sample/view/SpecialData.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/AboutAuthor.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/view/RootLayout.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/Edit.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/Special.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/FilterController.java" />
         <option value="$PROJECT_DIR$/src/sample/view/Filter.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/view/RootLayoutController.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" />
-        <option value="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" />
         <option value="$PROJECT_DIR$/src/sample/res/text/Engineers.txt" />
-        <option value="$PROJECT_DIR$/src/sample/model/IO.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/Engineer.java" />
-        <option value="$PROJECT_DIR$/src/sample/view/SpecialDataController.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java" />
         <option value="$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml" />
         <option value="$PROJECT_DIR$/src/sample/model/AlertData.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompNameAscAgeDesc.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/Engineer.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/EngineerListWrapper.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/IO.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/AboutAuthorController.java" />
         <option value="$PROJECT_DIR$/src/sample/view/EditController.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/SpecialDataController.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDescNameAsc.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/Special2Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/RootLayout.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/view/RootLayoutController.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/SpecialController.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
@@ -246,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -327,36 +326,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lektronic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lektronic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sort" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,19 +346,19 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proga" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nrf" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\view" />
-      <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\res\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\old" />
       <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\res\Text" />
       <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\res\images" />
       <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\res" />
       <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\view" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\view" />
+      <recent name="C:\Users\Пользователь\Desktop\учеба\3 семестр\Программирование\Lektronic\src\sample\res\css" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -678,6 +652,14 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
     </task>
+    <task id="LOCAL-00001" summary="add AlertData class">
+      <created>1477489563001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1477489563001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -694,21 +676,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32636657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21331316" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -748,7 +730,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -757,91 +739,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#handleNew#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="140" selection-start-line="34" selection-start-column="140" selection-end-line="34" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="120" column="54" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="54" />
-          <folding>
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
-            <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
-            <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-            <element signature="method#showSpecialData#0;class#Main#0" expanded="false" />
-            <element signature="method#getEngineerFilePath#0;class#Main#0" expanded="false" />
-            <element signature="method#setEngineerFilePath#0;class#Main#0" expanded="false" />
-            <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />
-            <element signature="method#saveEngineersDataToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#removeUnder#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="docComment;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/EditController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
-            <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
+            <element signature="method#isInputValid#0;class#EditController#0" expanded="false" />
             <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
             <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
           </folding>
@@ -857,6 +760,8 @@
             <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
             <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
             <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,11 +771,12 @@
         <state relative-caret-position="1326">
           <caret line="95" column="19" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
           <folding>
+            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-            <element signature="method#showSpecialData#0;class#Main#0" expanded="false" />
             <element signature="method#getEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#setEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />
@@ -885,15 +791,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleSortTable#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleSortCat#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="e#6939#6940#0" expanded="true" />
+            <element signature="e#6977#6978#0" expanded="true" />
             <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#setMain#0;class#EngineerOverviewController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -903,7 +812,7 @@
         <state relative-caret-position="1853">
           <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
           <folding>
-            <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
+            <element signature="method#isInputValid#0;class#EditController#0" expanded="false" />
             <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
             <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
           </folding>
@@ -911,14 +820,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Edit.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayoutController.java">
@@ -930,19 +839,21 @@
             <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
             <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
             <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthor.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
@@ -950,11 +861,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
           <folding>
+            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-            <element signature="method#showSpecialData#0;class#Main#0" expanded="false" />
             <element signature="method#getEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#setEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />
@@ -969,15 +881,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleSortTable#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleSortCat#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="e#6939#6940#0" expanded="true" />
+            <element signature="e#6977#6978#0" expanded="true" />
             <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
             <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#setMain#0;class#EngineerOverviewController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -991,6 +906,8 @@
             <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
             <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
             <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,11 +917,12 @@
         <state relative-caret-position="68">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
+            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-            <element signature="method#showSpecialData#0;class#Main#0" expanded="false" />
             <element signature="method#getEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#setEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />
@@ -1016,14 +934,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
@@ -1053,87 +971,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Edit.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/Special.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayout.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/EngineerListWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Engineer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
-          <folding>
-            <element signature="method#Engineer#0;class#Engineer#0" expanded="false" />
-            <element signature="method#Engineer#1;class#Engineer#0" expanded="false" />
-            <element signature="method#compareTo#0;class#Engineer#0" expanded="false" />
-            <element signature="method#equals#0;class#Engineer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatAscIdDesc.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompNameAscAgeDesc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
     <entry file="file://$PROJECT_DIR$/out/production/Lektronic/sample/view/EngineerOverviewController.class">
@@ -1141,17 +989,6 @@
         <state relative-caret-position="323">
           <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
@@ -1162,110 +999,220 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthor.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthorController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatDescAgeAsc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/SpecialDataController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompNameAscAgeDesc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="method#sumCat1#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#sumCat2#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#sumCat3#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#findMaxAge#0;class#SpecialDataController#0" expanded="false" />
-            <element signature="method#findMinAge#0;class#SpecialDataController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayoutController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompNameDescAgeAsc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="method#handleNew#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
-            <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/IO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDescNameAsc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/Sort/CompCatAscAgeDesc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/SpecialDataController.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverview.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/asd.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/view/Special.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/Engineer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/AboutAuthorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
+          <folding>
+            <element signature="method#handleSortTable#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleSortCat#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleDeleteUnderAge#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleDeleteUnderCat#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="e#6939#6940#0" expanded="true" />
+            <element signature="e#6977#6978#0" expanded="true" />
+            <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
+            <element signature="method#setMain#0;class#EngineerOverviewController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Lektronic/sample/view/Special.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/AlertData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="85">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="36" column="82" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/RootLayoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding>
+            <element signature="method#handleNew#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="method#handleOpen#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="method#handleSave#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="method#handleSaveAs#0;class#RootLayoutController#0" expanded="false" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/EngineerListWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/SpecialController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="method#sum1cat#0;class#SpecialController#0" expanded="false" />
+            <element signature="method#sum2cat#0;class#SpecialController#0" expanded="false" />
+            <element signature="method#sum3cat#0;class#SpecialController#0" expanded="false" />
+            <element signature="method#maxAge#0;class#SpecialController#0" expanded="false" />
+            <element signature="method#minAge#0;class#SpecialController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/EditController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="296">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="method#setEngineer#0;class#EditController#0" expanded="false" />
+            <element signature="method#isInputValid#0;class#EditController#0" expanded="false" />
             <element signature="method#isIDRepeat#0;class#EditController#0" expanded="false" />
             <element signature="method#handleOk#0;class#EditController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/EngineerOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="171" column="46" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#isValidFilterField#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleFilter#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleAdd#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleEdit#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#handleDeleteById#0;class#EngineerOverviewController#0" expanded="false" />
-            <element signature="method#initialize#0;class#EngineerOverviewController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+        <state relative-caret-position="188">
+          <caret line="160" column="34" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
           <folding>
+            <element signature="method#Main#0;class#Main#0" expanded="false" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#initRootLayout#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerOverview#0;class#Main#0" expanded="false" />
             <element signature="method#showEngineerEdit#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-            <element signature="method#showSpecialData#0;class#Main#0" expanded="false" />
             <element signature="method#getEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#setEngineerFilePath#0;class#Main#0" expanded="false" />
             <element signature="method#loadEngineerDataFromFile#0;class#Main#0" expanded="false" />

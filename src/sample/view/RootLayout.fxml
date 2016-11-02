@@ -34,7 +34,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleReset" text="Reset">
+                        <MenuItem mnemonicParsing="false" onAction="#handleSpecial" text="Special">
                      <accelerator>
                         <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator></MenuItem>

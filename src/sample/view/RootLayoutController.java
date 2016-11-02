@@ -7,12 +7,11 @@ import sample.Main;
 import java.io.File;
 
 /**
- * Created by Lektor on 10.10.2016.
+ * @author Lektor
  */
 public class RootLayoutController {
 
     private Main main;
-    private EngineerOverviewController controller;
 
     public void setMain(Main main){
         this.main = main;
@@ -69,7 +68,9 @@ public class RootLayoutController {
         main.showAboutAuthor();
     }
     @FXML
-    private void handleReset(){}
+    private void handleSpecial(){
+        main.showSpecialData();
+    }
     public RootLayoutController(){}
     @FXML
     public void initialize(){}

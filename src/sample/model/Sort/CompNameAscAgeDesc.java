@@ -5,7 +5,7 @@ import sample.model.Engineer;
 import java.util.Comparator;
 
 /**
- * Created by Lektor on 28.09.2016.
+ * @author Lektor
  */
 public class CompNameAscAgeDesc implements Comparator<Engineer> {
     @Override

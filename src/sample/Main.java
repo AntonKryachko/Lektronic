@@ -3,6 +3,7 @@ package sample;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -12,6 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import sample.model.AlertData;
 import sample.model.Engineer;
 import sample.model.EngineerListWrapper;
 import sample.view.*;
@@ -22,7 +24,9 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.IOException;
 import java.util.prefs.Preferences;
-
+/**
+* @author Lektor
+*/
 public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
@@ -140,11 +144,11 @@ public class Main extends Application {
             authorStage.setTitle("About Author");
             authorStage.initModality(Modality.WINDOW_MODAL);
             authorStage.initOwner(primaryStage);
+            authorStage.getIcons().add(new Image("sample/res/images/holybible.png"));
+            authorStage.setResizable(false);
 
             Scene scene = new Scene(page);
             authorStage.setScene(scene);
-            authorStage.getIcons().add(new Image("sample/res/images/holybible.png"));
-            authorStage.setResizable(false);
 
             AboutAuthorController controller = loader.getController();
             controller.setAuthorStage(authorStage);
@@ -158,7 +162,7 @@ public class Main extends Application {
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/Special.fxml"));
-            AnchorPane page = loader.load();
+            Pane page = loader.load();
 
             Stage specialStage = new Stage();
             specialStage.setTitle("Special");
@@ -169,12 +173,16 @@ public class Main extends Application {
             Scene scene = new Scene(page);
             specialStage.setScene(scene);
 
-            SpecialDataController controller = loader.getController();
+            SpecialController controller = loader.getController();
             controller.setSpecialStage(specialStage);
-            controller.setEngineers(engineers);
             controller.setMain(this);
 
-            specialStage.showAndWait();
+            controller.setEngineers(engineers);
+            System.out.println(controller.sum1cat());
+
+
+
+            specialStage.show();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -210,12 +218,13 @@ public class Main extends Application {
 
             setEngineerFilePath(file);
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Could not load data");
-            alert.setContentText("Could not load data from file:\n" + file.getPath());
-
-            alert.showAndWait();
+            new AlertData(
+                    primaryStage,
+                    "Error",
+                    "Could not load data",
+                    "Could not load data from file:\n" + file.getPath(),
+                    Alert.AlertType.ERROR
+            );
         }
     }
     public void saveEngineersDataToFile(File file){
@@ -231,12 +240,13 @@ public class Main extends Application {
 
             setEngineerFilePath(file);
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Could not save data");
-            alert.setContentText("Could not save data to file:\n" + file.getPath());
-
-            alert.showAndWait();
+            new AlertData(
+                    primaryStage,
+                    "Error",
+                    "Could not save data",
+                    "Could not save data to file:\n" + file.getPath(),
+                    Alert.AlertType.ERROR
+            );
         }
     }
     public void removeUnder(int value, boolean isAge){
@@ -256,4 +266,5 @@ public class Main extends Application {
         }
         engineers = list;
     }
+
 }

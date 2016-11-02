@@ -9,7 +9,7 @@ import sample.model.AlertData;
 import sample.model.Engineer;
 
 /**
- * @author  Lektor on 10.10.2016.
+ * @author  Lektor
  */
 public class EditController {
     @FXML

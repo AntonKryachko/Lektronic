@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
- * Created by Lektor on 11.10.2016.
+ * @author Lektor
  */
 @XmlRootElement(name = "engineers")
 public class EngineerListWrapper {

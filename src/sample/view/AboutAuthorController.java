@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
- * Created by Lektor on 10.10.2016.
+ * @author Lektor
  */
 
 public class AboutAuthorController {

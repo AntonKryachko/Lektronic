@@ -5,7 +5,7 @@ package sample.model;
 import java.io.*;
 
 /**
- * Created by Lektor on 25.09.2016.
+ * @author Lektor
  */
 public class IO {
     public static void write(String fileName, String str) throws IOException {
