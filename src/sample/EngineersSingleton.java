@@ -11,30 +11,7 @@ import java.util.List;
  */
 public class EngineersSingleton {
     private static EngineersSingleton instance;
-    private EngineersSingleton(){
-        engineers.addAll(
-                new Engineer(48877, "Клим",13,2),
-                new Engineer(57677,"Жуков",10,2),
-                new Engineer(15411,"Чехов",2,1),
-                new Engineer(32521,"Пучков",6,1),
-                new Engineer(21344,"Поттер",4,1),
-                new Engineer(12314,"Наумов",11,2),
-                new Engineer(21346,"Слуцкий",9,2),
-                new Engineer(41131,"Сосюра",20,3),
-                new Engineer(3182,"Норбобаев",10,2),
-                new Engineer(45613,"Беггинс",7,1),
-                new Engineer(54613,"Петров",8,2),
-                new Engineer(15431,"Степанянов",6,1),
-                new Engineer(12314,"Ретушив",2,1),
-                new Engineer(47531,"Авдеев",15,2),
-                new Engineer(37981,"Нигородский",21,3),
-                new Engineer(31333,"Луговьев",14,2),
-                new Engineer(52352,"Корнедев",4,1),
-                new Engineer(12948,"Дурнев",15,3),
-                new Engineer(25463,"Бурев",11,2),
-                new Engineer(27364,"Топор",24,3)
-        );
-    }
+    private EngineersSingleton(){}
     public static EngineersSingleton getInstance() {
         if (instance == null)
             instance = new EngineersSingleton();
