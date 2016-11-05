@@ -1,27 +1,24 @@
-package sample.view;
+package sample.controller;
+
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.TableColumn.SortType;
+import sample.EngineersSingleton;
 import sample.Main;
 import sample.model.AlertData;
 import sample.model.Engineer;
-import sample.model.Sort.CompCatAscAgeDesc;
 import sample.model.Sort.CompCatAscAgeDescNameAsc;
-import sample.model.Sort.CompNameAscAgeDesc;
-
-import java.util.Comparator;
 
 /**
  * @author Lektor
  */
 public class EngineerOverviewController {
     private Main main;
-
-    private int number = 0;
+    private final ToggleGroup toggleGroup = new ToggleGroup();
+    private EngineersSingleton engineers = EngineersSingleton.getInstance();
     @FXML
     private TableView<Engineer> engineerTable;
     @FXML
@@ -47,23 +44,17 @@ public class EngineerOverviewController {
     @FXML
     private TextField filterField;
 
-    private ToggleGroup g;
-
-    private SortType c;
-
-    @FXML
-    private void handleSortTable() {
-
+    public void setMain(Main main) {
+        this.main = main;
     }
     @FXML
     private void handleSortCat(){
-        main.getEngineers().sort(new CompCatAscAgeDescNameAsc());
-        engineerTable.setItems(main.getEngineers());
+        engineers.getEngineers().sort(new CompCatAscAgeDescNameAsc());
+        engineerTable.setItems(engineers.getEngineers());
     }
     private boolean isValidFilterField() {
         String filter = filterField.getText(),
                 errorMsg = "";
-
         if (radioName.isSelected()) {
             if (filter == null || filter.length() == 0) {
                 errorMsg += "No valid, please enter NAME\n";
@@ -103,15 +94,16 @@ public class EngineerOverviewController {
                     "Invalid Filter!",
                     "Entered Filter invalid",
                     errorMsg,
-                    Alert.AlertType.ERROR);
+                    "ERROR"
+            );
             return false;
         }
     }
     @FXML
     private void handleFilter() {
-        if (isValidFilterField()) {
+        if(isValidFilterField()){
             String filter = filterField.getText();
-            ObservableList<Engineer> list = main.getEngineers();
+            ObservableList<Engineer> list = engineers.getEngineers();
             ObservableList<Engineer> ol = FXCollections.observableArrayList();
             if (radioName.isSelected()) {
                 for (Engineer eng : list) {
@@ -137,8 +129,8 @@ public class EngineerOverviewController {
         }
     }
     @FXML
-    private void handleReset() {
-        engineerTable.setItems(main.getEngineers());
+    private void handleReset(){
+        engineerTable.setItems(engineers.getEngineers());
     }
     @FXML
     private void handleDeleteUnderAge() {
@@ -157,15 +149,15 @@ public class EngineerOverviewController {
             }
         }
         if (errorMSG.length() == 0) {
-            main.removeUnder(Integer.parseInt(removeUnderAge), true);
-            engineerTable.setItems(main.getEngineers());
+            engineers.removeUnderAge(Integer.parseInt(removeUnderAge));
+            engineerTable.setItems(engineers.getEngineers());
         } else {
             new AlertData(
                     main.getPrimaryStage(),
                     "Invalid Age!",
                     "Entered Age invalid",
                     errorMSG,
-                    Alert.AlertType.ERROR
+                    "ERROR"
             );
         }
         deleteUnderAgeField.setText("");
@@ -187,68 +179,70 @@ public class EngineerOverviewController {
             }
         }
         if (errorMSG.length() == 0) {
-            main.removeUnder(Integer.parseInt(removeUnderCategory), false);
-            engineerTable.setItems(main.getEngineers());
+            engineers.removeUnderCategory(Integer.parseInt(removeUnderCategory));
+            engineerTable.setItems(engineers.getEngineers());
         } else {
             new AlertData(
                     main.getPrimaryStage(),
                     "Invalid Category!",
                     "Entered Category invalid",
                     errorMSG,
-                    Alert.AlertType.ERROR
+                    "ERROR"
             );
         }
         deleteUnderCatField.setText("");
     }
     @FXML
     private void handleSpecial() {
-        main.showSpecialData();
+        main.showSpecial();
     }
     @FXML
     private void handleAdd() {
         Engineer engineer = new Engineer();
-        boolean okID = main.showEngineerEdit(engineer);
-        if (okID) {
-            main.getEngineers().add(engineer);
+        boolean okID = main.showEditEngineers(engineer);
+        if (okID){
+            engineers.add(engineer);
         }
     }
     @FXML
     private void handleEdit() {
-        Engineer selectedEng = engineerTable.getSelectionModel().getSelectedItem();
-        if (selectedEng != null) {
-            main.showEngineerEdit(selectedEng);
+        Engineer selectedEngineer = engineerTable.getSelectionModel().getSelectedItem();
+        if (selectedEngineer != null){
+            main.showEditEngineers(selectedEngineer);
         } else {
             new AlertData(
                     main.getPrimaryStage(),
                     "No Selection",
                     "No Engineer Selected",
                     "Please select a engineer in the table",
-                    Alert.AlertType.WARNING
+                    "WARNING"
             );
         }
     }
     @FXML
     private void handleDeleteById() {
-        int selectedEng = engineerTable.getSelectionModel().getSelectedIndex();
-        if (selectedEng >= 0) {
-            engineerTable.getItems().remove(selectedEng);
+        int selectedIndex = engineerTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0){
+            engineerTable.getItems().remove(selectedIndex);
         } else {
             new AlertData(
                     main.getPrimaryStage(),
                     "No Selection",
                     "No Engineer Selected",
                     "Please select a engineer in the table",
-                    Alert.AlertType.WARNING
+                    "WARNING"
             );
         }
     }
     public EngineerOverviewController() {}
     @FXML
     public void initialize() {
-        g = new ToggleGroup();
-        radioAge.setToggleGroup(g);
-        radioName.setToggleGroup(g);
-        radioCategory.setToggleGroup(g);
+        FXCollections.sort(engineers.getEngineers());
+        engineerTable.setItems(engineers.getEngineers());
+
+        radioAge.setToggleGroup(toggleGroup);
+        radioName.setToggleGroup(toggleGroup);
+        radioCategory.setToggleGroup(toggleGroup);
         radioName.setSelected(true);
 
 //        numberColumn.setCellValueFactory(cellData -> cellData.getTableColumn());
@@ -256,12 +250,5 @@ public class EngineerOverviewController {
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         ageColumn.setCellValueFactory(cellData -> cellData.getValue().ageProperty().asObject());
         categoryColumn.setCellValueFactory(cellData -> cellData.getValue().categoryProperty().asObject());
-
     }
-    public void setMain(Main main) {
-        this.main = main;
-        FXCollections.sort(main.getEngineers());
-        engineerTable.setItems(main.getEngineers());
-    }
-
 }

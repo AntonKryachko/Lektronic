@@ -1,10 +1,11 @@
-package sample.view;
+package sample.controller;
+
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.Main;
+import sample.EngineersSingleton;
 import sample.model.AlertData;
 import sample.model.Engineer;
 
@@ -20,17 +21,12 @@ public class EditController {
     private TextField ageField;
     @FXML
     private TextField categoryField;
-
-    private boolean okClicked = false;
+    private boolean okClicked;
     private Stage editStage;
+    private EngineersSingleton engineers = EngineersSingleton.getInstance();
     private Engineer engineer;
-    private Main main;
 
-    public void setMain(Main main) {this.main = main;}
-    public boolean isOkClicked() {
-        return okClicked;
-    }
-    public void setEditStage(Stage editStage) {
+    public void setEditStage(Stage editStage){
         this.editStage = editStage;
     }
     public void setEngineer(Engineer engineer){
@@ -41,6 +37,10 @@ public class EditController {
         ageField.setText(Integer.toString(engineer.getAge()));
         categoryField.setText(Integer.toString(engineer.getCategory()));
     }
+    public boolean isOkClicked(){
+        return okClicked;
+    }
+
     private boolean isInputValid(){
         String errorString = "";
 
@@ -48,7 +48,7 @@ public class EditController {
             errorString += "No valid ID\n";
         }else{
             try{
-                if (isIDRepeat(Integer.parseInt(idField.getText()))){
+                if (engineers.isIDRepeat(Integer.parseInt(idField.getText()))){
                     errorString += "No valid ID (not to be repeated)\n";
                 }
             }catch (NumberFormatException e){
@@ -62,7 +62,10 @@ public class EditController {
             errorString += "No valid AGE\n";
         }else{
             try{
-                Integer.parseInt(ageField.getText());
+                int age = Integer.parseInt(ageField.getText());
+                if (age < 0) {
+                    errorString += "No valid AGE(must be positive)\n";
+                }
             }catch (NumberFormatException e){
                 errorString += "No valid AGE (must be an integer)\n";
             }
@@ -71,7 +74,10 @@ public class EditController {
             errorString += "No valid CATEGORY\n";
         }else{
             try{
-                Integer.parseInt(categoryField.getText());
+                int category = Integer.parseInt(categoryField.getText());
+                if (!(category > 0 && category < 4)) {
+                    errorString += "No valid CATEGORY(must be from 1 to 3)\n";
+                }
             }catch (NumberFormatException e){
                 errorString += "No valid CATEGORY (must be an integer)\n";
             }
@@ -84,19 +90,10 @@ public class EditController {
                     "Invalid Fields",
                     "Please correct invalid fields",
                     errorString,
-                    Alert.AlertType.ERROR
+                    "ERROR"
             );
             return false;
         }
-    }
-    private boolean isIDRepeat(int id){
-        int i = 0;
-        for (Engineer e: main.getEngineers()) {
-            if (e.getId() == id){
-                i++;
-            }
-        }
-        return i > 0;
     }
     @FXML
     private void handleOk(){

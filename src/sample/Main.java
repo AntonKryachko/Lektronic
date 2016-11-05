@@ -1,22 +1,18 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import sample.controller.*;
 import sample.model.AlertData;
 import sample.model.Engineer;
 import sample.model.EngineerListWrapper;
-import sample.view.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -24,54 +20,35 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.IOException;
 import java.util.prefs.Preferences;
+
 /**
 * @author Lektor
 */
-public class Main extends Application {
+public class Main extends Application{
     private Stage primaryStage;
     private BorderPane rootLayout;
-    private ObservableList<Engineer> engineers = FXCollections.observableArrayList();
-//    private ObservableSet<Engineer> observableSet = FXCollections.observableSet((Set)engineers);
+    private EngineersSingleton engineers = EngineersSingleton.getInstance();
+    public final String NAME_APP = "Lectronic";
+    public final String KEY_FILE = "filePath";
 
-    public static void main(String[] args) {launch(args);}
-    public ObservableList<Engineer> getEngineers() {return engineers;}
-    public Stage getPrimaryStage() {return primaryStage;}
-
-    public Main(){
-        engineers.addAll(
-                new Engineer(48877, "Клим",13,2),
-                new Engineer(57677,"Жуков",10,2),
-                new Engineer(15411,"Чехов",2,1),
-                new Engineer(32521,"Пучков",6,1),
-                new Engineer(21344,"Поттер",4,1),
-                new Engineer(12314,"Наумов",11,2),
-                new Engineer(21346,"Слуцкий",9,2),
-                new Engineer(41131,"Сосюра",20,3),
-                new Engineer(3182,"Норбобаев",10,2),
-                new Engineer(45613,"Беггинс",7,1),
-                new Engineer(54613,"Петров",8,2),
-                new Engineer(15431,"Степанянов",6,1),
-                new Engineer(12314,"Ретушив",2,1),
-                new Engineer(47531,"Авдеев",15,2),
-                new Engineer(37981,"Нигородский",21,3),
-                new Engineer(31333,"Луговьев",14,2),
-                new Engineer(52352,"Корнедев",4,1),
-                new Engineer(12948,"Дурнев",15,3),
-                new Engineer(25463,"Бурев",11,2),
-                new Engineer(27364,"Топор",24,3)
-        );
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+    public static void main(String[] args) {
+        launch(args);
     }
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Lectronic");
-        this.primaryStage.getIcons().add(new Image("sample/res/images/main_icon.png"));
+        this.primaryStage.setTitle(NAME_APP);
+        this.primaryStage.getIcons().add(new Image("sample/model/res/images/main_icon.png"));
         this.primaryStage.setResizable(false);
-        initRootLayout();
+
+        initRooLayout();
 
         showEngineerOverview();
     }
-    private void initRootLayout(){
+    private void initRooLayout(){
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/RootLayout.fxml"));
@@ -84,58 +61,32 @@ public class Main extends Application {
             controller.setMain(this);
 
             primaryStage.show();
-        } catch (IOException e) {
+
+        }catch (IOException e){
             e.printStackTrace();
         }
-        File file = getEngineerFilePath();
-        if (file != null){
-            loadEngineerDataFromFile(file);
+        File file = getFilePath();
+        if(file != null){
+            load(file);
         }
     }
     private void showEngineerOverview(){
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/EngineerOverview.fxml"));
-            AnchorPane engineerOverview = loader.load();
+            AnchorPane mainPage = loader.load();
 
-            rootLayout.setCenter(engineerOverview);
+            rootLayout.setCenter(mainPage);
 
             EngineerOverviewController controller = loader.getController();
             controller.setMain(this);
+
         }catch (IOException e){
             e.printStackTrace();
-        }
-    }
-    public boolean showEngineerEdit(Engineer engineer){
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("view/Edit.fxml"));
-            AnchorPane page = loader.load();
-
-            Stage editStage = new Stage();
-            editStage.setTitle("Edit engineer");
-            editStage.initModality(Modality.WINDOW_MODAL);
-            editStage.initOwner(primaryStage);
-            editStage.setResizable(false);
-
-            Scene scene = new Scene(page);
-            editStage.setScene(scene);
-
-            EditController controller = loader.getController();
-            controller.setEditStage(editStage);
-            controller.setEngineer(engineer);
-            controller.setMain(this);
-
-            editStage.showAndWait();
-
-            return controller.isOkClicked();
-        }catch (IOException e){
-            e.printStackTrace();
-            return false;
         }
     }
     public void showAboutAuthor(){
-        try{
+        try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/AboutAuthor.fxml"));
             Pane page = loader.load();
@@ -144,7 +95,7 @@ public class Main extends Application {
             authorStage.setTitle("About Author");
             authorStage.initModality(Modality.WINDOW_MODAL);
             authorStage.initOwner(primaryStage);
-            authorStage.getIcons().add(new Image("sample/res/images/holybible.png"));
+            authorStage.getIcons().add(new Image("sample/model/res/images/holybible.png"));
             authorStage.setResizable(false);
 
             Scene scene = new Scene(page);
@@ -158,7 +109,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-    public void showSpecialData(){
+    public void showSpecial(){
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/Special.fxml"));
@@ -169,102 +120,106 @@ public class Main extends Application {
             specialStage.initModality(Modality.WINDOW_MODAL);
             specialStage.initOwner(primaryStage);
             specialStage.setResizable(false);
+            specialStage.getIcons().add(new Image("sample\\model\\res\\images\\document.png"));
 
             Scene scene = new Scene(page);
             specialStage.setScene(scene);
 
             SpecialController controller = loader.getController();
             controller.setSpecialStage(specialStage);
-            controller.setMain(this);
-
-            controller.setEngineers(engineers);
-            System.out.println(controller.sum1cat());
-
-
 
             specialStage.show();
         }catch (IOException e){
             e.printStackTrace();
         }
     }
-    public File getEngineerFilePath(){
+    public boolean showEditEngineers(Engineer engineer){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("view/Edit.fxml"));
+            AnchorPane page = loader.load();
+
+            Stage editStage = new Stage();
+            editStage.setTitle("Edit engineer");
+            editStage.initModality(Modality.WINDOW_MODAL);
+            editStage.initOwner(primaryStage);
+            editStage.setResizable(false);
+            editStage.getIcons().add(new Image("sample\\model\\res\\images\\Data_settings.png"));
+
+            Scene scene = new Scene(page);
+            editStage.setScene(scene);
+
+            EditController controller = loader.getController();
+            controller.setEditStage(editStage);
+            controller.setEngineer(engineer);
+
+            editStage.showAndWait();
+
+            return controller.isOkClicked();
+        }catch (IOException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public File getFilePath(){
         Preferences preferences = Preferences.userNodeForPackage(getClass());
-        String filePath = preferences.get("filePath", null);
+        String filePath = preferences.get(KEY_FILE, null);
         if (filePath != null){
             return new File(filePath);
-        }else {
+        } else {
             return null;
         }
     }
-    public void setEngineerFilePath(File filePath){
+    public void setFilePath(File filePath){
         Preferences preferences = Preferences.userNodeForPackage(getClass());
         if (filePath != null){
-            preferences.put("filePath", filePath.getPath());
-            primaryStage.setTitle("Lectronic \"" + filePath.getName() + "\"");
-        }else{
-            preferences.remove("filePath");
-            primaryStage.setTitle("Lectronic");
+            preferences.put(KEY_FILE, filePath.getPath());
+            primaryStage.setTitle(NAME_APP + " \"" + filePath.getName() + "\"");
+        } else {
+            preferences.remove(KEY_FILE);
+            primaryStage.setTitle(NAME_APP);
         }
     }
-    public void loadEngineerDataFromFile(File file){
+    public void load(File file){
         try{
             JAXBContext context = JAXBContext.newInstance(EngineerListWrapper.class);
-            Unmarshaller um = context.createUnmarshaller();
+            Unmarshaller unmarshaller = context.createUnmarshaller();
 
-            EngineerListWrapper wrapper = (EngineerListWrapper) um.unmarshal(file);
+            EngineerListWrapper wrapper = (EngineerListWrapper) unmarshaller.unmarshal(file);
 
-            engineers.clear();
-            engineers.addAll(wrapper.getEngineers());
+            this.engineers.setAll(wrapper.getEngineers());
 
-            setEngineerFilePath(file);
+            setFilePath(file);
         }catch (Exception e){
             new AlertData(
                     primaryStage,
                     "Error",
                     "Could not load data",
                     "Could not load data from file:\n" + file.getPath(),
-                    Alert.AlertType.ERROR
+                    "ERROR"
             );
         }
     }
-    public void saveEngineersDataToFile(File file){
+    public void save(File file){
         try{
             JAXBContext context = JAXBContext.newInstance(EngineerListWrapper.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
             EngineerListWrapper wrapper = new EngineerListWrapper();
-            wrapper.setEngineers(engineers);
+            wrapper.setEngineers(engineers.getEngineers());
 
-            marshaller.marshal(wrapper, file);
+            marshaller.marshal(wrapper,file);
 
-            setEngineerFilePath(file);
+            setFilePath(file);
         }catch (Exception e){
             new AlertData(
                     primaryStage,
                     "Error",
                     "Could not save data",
                     "Could not save data to file:\n" + file.getPath(),
-                    Alert.AlertType.ERROR
+                    "ERROR"
             );
         }
     }
-    public void removeUnder(int value, boolean isAge){
-        ObservableList<Engineer> list = FXCollections.observableArrayList();
-        if (isAge){
-            for (Engineer engineer: engineers){
-                if (engineer.getAge() >= value){
-                    list.add(engineer);
-                }
-            }
-        }else{
-            for (Engineer engineer: engineers){
-                if (engineer.getCategory() >= value){
-                    list.add(engineer);
-                }
-            }
-        }
-        engineers = list;
-    }
-
 }

@@ -1,7 +1,8 @@
-package sample.view;
+package sample.controller;
 
 import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
+import sample.EngineersSingleton;
 import sample.Main;
 
 import java.io.File;
@@ -13,13 +14,15 @@ public class RootLayoutController {
 
     private Main main;
 
+    private EngineersSingleton engineers = EngineersSingleton.getInstance();
+
     public void setMain(Main main){
         this.main = main;
     }
     @FXML
     private void handleNew(){
-        main.getEngineers().clear();
-        main.setEngineerFilePath(null);
+        engineers.clear();
+        main.setFilePath(null);
     }
     @FXML
     private void handleOpen(){
@@ -31,14 +34,14 @@ public class RootLayoutController {
         fileChooser.getExtensionFilters().add(extensionFilter);
         File file = fileChooser.showOpenDialog(main.getPrimaryStage());
         if (file != null){
-            main.loadEngineerDataFromFile(file);
+            main.load(file);
         }
     }
     @FXML
     private void handleSave(){
-        File engFile = main.getEngineerFilePath();
+        File engFile = main.getFilePath();
         if (engFile != null){
-            main.saveEngineersDataToFile(engFile);
+            main.save(engFile);
         }else {
             handleSaveAs();
         }
@@ -53,10 +56,10 @@ public class RootLayoutController {
         fileChooser.getExtensionFilters().add(extensionFilter);
         File file = fileChooser.showSaveDialog(main.getPrimaryStage());
         if(file != null){
-            if (!file.getPath().endsWith(".xml")){
+            if(!file.getPath().endsWith(".xml")){
                 file = new File(file.getPath() + ".xml");
             }
-            main.saveEngineersDataToFile(file);
+            main.save(file);
         }
     }
     @FXML
@@ -69,7 +72,7 @@ public class RootLayoutController {
     }
     @FXML
     private void handleSpecial(){
-        main.showSpecialData();
+        main.showSpecial();
     }
     public RootLayoutController(){}
     @FXML
