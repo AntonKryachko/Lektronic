@@ -5,9 +5,10 @@ import javafx.collections.ObservableList;
 import sample.model.Engineer;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * Created by Lektor on 05.11.2016.
+ * @author by Lektor on 05.11.2016.
  */
 public class EngineersSingleton {
     private static EngineersSingleton instance;
@@ -64,11 +65,7 @@ public class EngineersSingleton {
     }
     public void removeUnderCategory(int category){
         ObservableList<Engineer> list = FXCollections.observableArrayList();
-        for (Engineer engineer: engineers){
-            if(engineer.getCategory() >= category){
-                list.add(engineer);
-            }
-        }
+        list.addAll(engineers.stream().filter(engineer -> engineer.getCategory() >= category).collect(Collectors.toList()));
         setAll(list);
     }
     public int sumCategory(int category){
